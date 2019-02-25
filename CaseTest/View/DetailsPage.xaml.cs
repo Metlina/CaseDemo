@@ -2,6 +2,7 @@
 using CaseTest.ViewModel;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace CaseTest.View
 {
@@ -12,6 +13,10 @@ namespace CaseTest.View
         public DetailsPage()
         {
             InitializeComponent();
+
+            //On<Xamarin.Forms.PlatformConfiguration.iOS>().SetUseSafeArea(true);
+
+            On<Xamarin.Forms.PlatformConfiguration.iOS>().SetLargeTitleDisplay(LargeTitleDisplayMode.Never);
 
             //ButtonSpeak.Clicked += ButtonSpeak_Clicked;
             //ButtonWebsite.Clicked += ButtonWebsite_Clicked;

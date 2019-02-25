@@ -1,5 +1,6 @@
 ﻿using CaseTest.ViewModel;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 
 namespace CaseTest.View
 {
@@ -13,6 +14,8 @@ namespace CaseTest.View
 
             vm = new SpeakersViewModel();
             BindingContext = vm;
+
+            On<Xamarin.Forms.PlatformConfiguration.iOS>().SetLargeTitleDisplay(LargeTitleDisplayMode.Automatic);
 
             //ListViewSpeakers.ItemSelected += ListViewSpeakers_ItemSelected;
         }
