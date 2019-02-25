@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             Title="Speakers"
+             x:Class="CaseTest.View.SpeakersPage">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            
+            <DataTemplate x:Key="ItemDataTemplate">
+                
+                <ViewCell>
+                    
+                    <Grid>
+                        
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        
+                        <forms:CachedImage Grid.RowSpan="2"
+                                           Source="{Binding Avatar}" 
+                                           HeightRequest="50" 
+                                           WidthRequest="50" />
+                        
+                        <Label Grid.Column="1"
+                               Text="{Binding Name}" />
+                        
+                        <Label Grid.Row="1" Grid.Column="1"
+                               Text="{Binding Title}" 
+                               TextColor="Gray"/>
+                        
+                    </Grid>
+                    
+                </ViewCell>
+                
+            </DataTemplate>
+            
+        </ResourceDictionary>
+    </ContentPage.Resources>
+   
+    <StackLayout Spacing="0">
+
+        <Button Text="Sync Speakers" 
+                Command="{Binding GetSpeakersCommand}"
+                IsVisible="{Binding IsBusy, Converter={StaticResource NegateBooleanConverter}}" />
+
+        <ActivityIndicator IsRunning="{Binding IsBusy}" 
+                           IsVisible="{Binding IsBusy}"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center" />
+
+        <ListView x:Name="ListViewSpeakers" 
+                  ItemsSource="{Binding Speakers}"
+                  CachingStrategy="RecycleElement" 
+                  ItemTemplate="{StaticResource ItemDataTemplate}" 
+                  HasUnevenRows="true"
+                  ItemTapped="ListViewSpeakers_OnItemTapped"
+                  IsVisible="{Binding IsBusy, Converter={StaticResource NegateBooleanConverter}}" />
+
+    </StackLayout>
+    
+</ContentPage>

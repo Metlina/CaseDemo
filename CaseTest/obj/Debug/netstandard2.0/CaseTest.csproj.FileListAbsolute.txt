@@ -1,0 +1,14 @@
+/Users/tinopetrina/dev/CaseTest/CaseTest/bin/Debug/netstandard2.0/CaseTest.deps.json
+/Users/tinopetrina/dev/CaseTest/CaseTest/bin/Debug/netstandard2.0/CaseTest.dll
+/Users/tinopetrina/dev/CaseTest/CaseTest/bin/Debug/netstandard2.0/CaseTest.pdb
+/Users/tinopetrina/dev/CaseTest/CaseTest/obj/Debug/netstandard2.0/CaseTest.csprojAssemblyReference.cache
+/Users/tinopetrina/dev/CaseTest/CaseTest/obj/Debug/netstandard2.0/App.xaml.g.cs
+/Users/tinopetrina/dev/CaseTest/CaseTest/obj/Debug/netstandard2.0/MainPage.xaml.g.cs
+/Users/tinopetrina/dev/CaseTest/CaseTest/obj/Debug/netstandard2.0/View/DetailsPage.xaml.g.cs
+/Users/tinopetrina/dev/CaseTest/CaseTest/obj/Debug/netstandard2.0/View/SpeakersPage.xaml.g.cs
+/Users/tinopetrina/dev/CaseTest/CaseTest/obj/Debug/netstandard2.0/CaseTest.csproj.CoreCompileInputs.cache
+/Users/tinopetrina/dev/CaseTest/CaseTest/obj/Debug/netstandard2.0/CaseTest.AssemblyInfoInputs.cache
+/Users/tinopetrina/dev/CaseTest/CaseTest/obj/Debug/netstandard2.0/CaseTest.AssemblyInfo.cs
+/Users/tinopetrina/dev/CaseTest/CaseTest/obj/Debug/netstandard2.0/XamlC.stamp
+/Users/tinopetrina/dev/CaseTest/CaseTest/obj/Debug/netstandard2.0/CaseTest.dll
+/Users/tinopetrina/dev/CaseTest/CaseTest/obj/Debug/netstandard2.0/CaseTest.pdb

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:forms="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:controls="clr-namespace:CaseTest.Controls;assembly=CaseTest"
+             xmlns:effects="clr-namespace:CaseTest.Effects;assembly=CaseTest"
+             x:Class="CaseTest.View.DetailsPage">
+    
+    <ScrollView Padding="10">
+        
+        <StackLayout Spacing="10" >
+            
+            <StackLayout.Effects>
+                <effects:DropShadowEffect />
+            </StackLayout.Effects>
+            
+            <forms:CachedImage Source="{Binding Avatar}" 
+                               HeightRequest="200" 
+                               WidthRequest="200"/>
+
+            <Label Text="{Binding Name}" 
+                   FontSize="24"/>
+            
+            <Label Text="{Binding Title}" 
+                   TextColor="Purple"/>
+            
+            <!--<Label Text="{Binding Description}"/>-->
+            
+            <controls:MultiLineBreakLabel Text="{Binding Description}"
+                                          MineMaxLines="4" />
+
+            <Button x:Name="ButtonSpeak" 
+                    Text="Speak"
+                    Command="{Binding SpeakCommand}" />
+            
+            <Button x:Name="ButtonWebsite"
+                    Text="Go to Website"
+                    Command="{Binding OpenWebsiteCommand}" />
+            
+        </StackLayout>
+        
+    </ScrollView>
+    
+</ContentPage>
